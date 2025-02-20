@@ -1,0 +1,46 @@
+{
+    "首页点击司库部": {
+        "recognition": "TemplateMatch",
+        "template": "首页司库部图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "司库部点击每日战斗"
+        ]
+    },
+    "司库部点击每日战斗": {
+        "recognition": "TemplateMatch",
+        "template": "司库部每日战斗.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "司库部点击一键领取",
+            "司库部返回主页"
+        ]
+    },
+    "司库部点击一键领取": {
+        "recognition": "TemplateMatch",
+        "template": "司库部一键领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "司库部再点击一次屏幕"
+        ]
+    },
+    "司库部再点击一次屏幕": {
+        "recognition": "DirectHit",
+        "target": "司库部点击一键领取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "司库部返回主页"
+        ]
+    },
+    "司库部返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    }
+
+}

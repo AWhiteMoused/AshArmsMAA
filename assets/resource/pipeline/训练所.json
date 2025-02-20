@@ -1,0 +1,461 @@
+{
+    "训练所-首页点击出击作战": {
+        "recognition": "OCR",
+        "expected": "出击作战",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击训练所"
+        ]
+    },
+    "点击训练所": {
+        "recognition": "OCR",
+        "expected": "训练所",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击战斗演习"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+    "点击战斗演习": {
+        "recognition": "OCR",
+        "expected": "战斗演习",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "向下滑到底1"
+        ]
+    },
+     "向下滑到底1":{
+        "action": "Swipe",
+        "begin": [400,400,10,10],
+        "end": [400,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 200,
+        "next":[
+            "点击出击1"
+        ]
+    },
+    "点击出击1":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "index": -1,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击代理指挥1"
+        ]
+    },
+    "点击代理指挥1":{
+        "recognition": "OCR",
+        "expected": "代理指挥",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击作战的出击1"
+        ]
+    },
+    "点击作战的出击1":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "post_wait_freezes": 8000,
+        "next":[
+            "点击战斗胜利1"
+        ]
+    },
+    "点击战斗胜利1":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次点击战斗胜利1"
+        ]
+    },
+    "再次点击战斗胜利1":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次再次点击战斗胜利1"
+        ]
+    },
+    "再次再次点击战斗胜利1":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击返回1"
+        ]
+    },
+    "点击返回1":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click",
+        "next":[
+            "点击狩猎行动"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "点击狩猎行动": {
+        "recognition": "OCR",
+        "expected": "狩猎行动",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "向下滑到底2"
+        ]
+    },
+     "向下滑到底2":{
+        "action": "Swipe",
+        "begin": [400,400,10,10],
+        "end": [400,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 200,
+        "next":[
+            "点击出击2"
+        ]
+    },
+    "点击出击2":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "index": -1,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击代理指挥2"
+        ]
+    },
+    "点击代理指挥2":{
+        "recognition": "OCR",
+        "expected": "代理指挥",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击作战的出击2"
+        ]
+    },
+    "点击作战的出击2":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "post_wait_freezes": 8000,
+        "next":[
+            "点击战斗胜利2"
+        ]
+    },
+    "点击战斗胜利2":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次点击战斗胜利2"
+        ]
+    },
+    "再次点击战斗胜利2":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次再次点击战斗胜利2"
+        ]
+    },
+    "再次再次点击战斗胜利2":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击返回2"
+        ]
+    },
+    "点击返回2":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click",
+        "next":[
+            "点击拓展训练"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "点击拓展训练": {
+        "recognition": "OCR",
+        "expected": "拓展训练",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "向下滑到底3"
+        ]
+    },
+     "向下滑到底3":{
+        "action": "Swipe",
+        "begin": [400,400,10,10],
+        "end": [400,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 200,
+        "next":[
+            "点击出击3"
+        ]
+    },
+    "点击出击3":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "index": -1,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击代理指挥3"
+        ]
+    },
+    "点击代理指挥3":{
+        "recognition": "OCR",
+        "expected": "代理指挥",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击作战的出击3"
+        ]
+    },
+    "点击作战的出击3":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "post_wait_freezes": 8000,
+        "next":[
+            "点击战斗胜利3"
+        ]
+    },
+    "点击战斗胜利3":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次点击战斗胜利3"
+        ]
+    },
+    "再次点击战斗胜利3":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次再次点击战斗胜利3"
+        ]
+    },
+    "再次再次点击战斗胜利3":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击返回3"
+        ]
+    },
+    "点击返回3":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click",
+        "next":[
+            "点击资源筹备"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "点击资源筹备": {
+        "recognition": "OCR",
+        "expected": "资源筹备",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "向下滑到底4"
+        ]
+    },
+     "向下滑到底4":{
+        "action": "Swipe",
+        "begin": [400,400,10,10],
+        "end": [400,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 200,
+        "next":[
+            "点击出击4"
+        ]
+    },
+    "点击出击4":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "index": -1,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击代理指挥4"
+        ]
+    },
+    "点击代理指挥4":{
+        "recognition": "OCR",
+        "expected": "代理指挥",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击作战的出击4"
+        ]
+    },
+    "点击作战的出击4":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "post_wait_freezes": 8000,
+        "next":[
+            "点击战斗胜利4"
+        ]
+    },
+    "点击战斗胜利4":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次点击战斗胜利4"
+        ]
+    },
+    "再次点击战斗胜利4":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次再次点击战斗胜利4"
+        ]
+    },
+    "再次再次点击战斗胜利4":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击返回4"
+        ]
+    },
+    "点击返回4":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click",
+        "next":[
+            "训练所结束返回主页"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "训练所结束返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "训练所结束返回主页2"
+        ]
+    },
+    "训练所结束返回主页2": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    }
+
+}

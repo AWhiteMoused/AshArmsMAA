@@ -1,0 +1,246 @@
+{
+    "首页点击防卫生产局图标": {
+        "recognition": "TemplateMatch",
+        "template": "首页防卫生产局图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局点击一键交付"
+        ]
+    },
+    "防卫生产局点击一键交付": {
+        "recognition": "TemplateMatch",
+        "template": "防卫生产局一键交付.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局点击获得一览",
+            "进入接取委托阶段"
+        ]
+    },
+    "防卫生产局点击获得一览": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "进入接取委托阶段"
+        ]
+    },
+    "进入接取委托阶段": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_wait_freezes": 1000,
+        "next":[
+            "识别当前是否含无结晶C级委托",
+            "防卫生产局向左滑"
+        ]
+    },
+    "识别当前是否含无结晶C级委托": {
+        "recognition": "TemplateMatch",
+        "template":[
+         "无结晶C级委托/测试.png"
+        ],
+        "threshold":0.99,
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "刷新掉无结晶C级委托"
+        ]
+    },
+    "刷新掉无结晶C级委托": {
+        "recognition": "TemplateMatch",
+        "template":"刷新.png",
+        "threshold":0.6,
+        "roi":"识别当前是否含无结晶C级委托",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "识别当前界面是否含消耗二字",
+            "防卫生产局点击确认"
+        ]
+    },
+    "识别当前界面是否含消耗二字": {
+        "recognition": "OCR",
+        "expected": "消耗",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局点击取消"
+        ]
+    },
+    "防卫生产局点击确认": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "识别当前是否含无结晶C级委托",
+            "防卫生产局向左滑"
+        ]
+    },
+    "防卫生产局点击取消": {
+        "recognition": "TemplateMatch",
+        "template": "取消图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局向左滑"
+        ]
+    },
+    "防卫生产局向左滑":{
+        "action": "Swipe",
+        "begin": [100,500,10,10],
+        "end": [500,500,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 500,
+        "next":[
+            "左滑后识别当前是否含无结晶C级委托",
+            "进行所有委托的接取"
+        ]
+    },
+    "左滑后识别当前是否含无结晶C级委托": {
+        "recognition": "TemplateMatch",
+        "template":[
+         "无结晶C级委托/测试.png"
+        ],
+        "threshold":0.99,
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "左滑后刷新掉无结晶C级委托"
+        ]
+    },
+    "左滑后刷新掉无结晶C级委托": {
+        "recognition": "TemplateMatch",
+        "template":"刷新.png",
+        "threshold":0.6,
+        "roi":"左滑后识别当前是否含无结晶C级委托",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "左滑后识别当前界面是否含消耗二字",
+            "左滑后防卫生产局点击确认"
+        ]
+    },
+    "左滑后识别当前界面是否含消耗二字": {
+        "recognition": "OCR",
+        "expected": "消耗",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "左滑后防卫生产局点击取消"
+        ]
+    },
+    "左滑后防卫生产局点击确认": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "左滑后识别当前是否含无结晶C级委托",
+            "进行所有委托的接取"
+        ]
+    },
+    "左滑后防卫生产局点击取消": {
+        "recognition": "TemplateMatch",
+        "template": "取消图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "进行所有委托的接取"
+        ]
+    },
+
+
+
+    "进行所有委托的接取": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局识别当前画面是否有接取二字"
+        ]
+    },
+    "防卫生产局识别当前画面是否有接取二字": {
+        "recognition": "OCR",
+        "expected": "接取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局点击一键推荐"
+        ]
+    },
+    "防卫生产局点击一键推荐": {
+        "recognition": "OCR",
+        "expected": "键推荐",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "委托界面点击确认"
+        ]
+    },
+    "委托界面点击确认": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局识别当前画面是否有接取二字",
+            "防卫生产局向右滑"
+        ]
+    },
+    "防卫生产局向右滑":{
+        "action": "Swipe",
+        "begin": [500,500,10,10],
+        "end": [100,500,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 500,
+        "next":[
+            "右滑后防卫生产局识别当前画面是否有接取二字",
+            "防卫生产局返回首页"
+        ]
+    },
+    "右滑后防卫生产局识别当前画面是否有接取二字": {
+        "recognition": "OCR",
+        "expected": "接取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局点击一键推荐"
+        ]
+    },
+    "右滑后防卫生产局点击一键推荐": {
+        "recognition": "OCR",
+        "expected": "键推荐",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "委托界面点击确认"
+        ]
+    },
+    "右滑后委托界面点击确认": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "防卫生产局识别当前画面是否有接取二字",
+            "防卫生产局返回首页"
+        ]
+    },
+
+
+
+
+
+
+    "防卫生产局返回首页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    }
+
+
+}

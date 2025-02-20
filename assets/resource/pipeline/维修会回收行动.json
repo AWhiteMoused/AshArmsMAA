@@ -1,0 +1,75 @@
+{
+    "首页点击维修会": {
+        "recognition": "OCR",
+        "expected": "维修会",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "维修会点击完成",
+            "点击委派新行动",
+            "从维修会返回首页"
+        ]
+    },
+    "维修会点击完成": {
+        "recognition": "TemplateMatch",
+        "template": "维修会完成图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "维修会屏幕点击"
+        ]
+    },
+    "维修会屏幕点击":{
+        "recognition": "DirectHit",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "维修会屏幕第二次点击"
+        ]
+    },
+    "维修会屏幕第二次点击":{
+        "recognition": "DirectHit",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "维修会点击确认图标"
+        ]
+    },
+    "维修会点击确认图标": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "维修会点击完成",
+            "点击委派新行动",
+            "从维修会返回首页"
+        ]
+    },
+    "点击委派新行动": {
+        "recognition": "TemplateMatch",
+        "template": "维修会委派新行动图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击开始行动"
+        ]
+    },
+    "点击开始行动": {
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击委派新行动",
+            "从维修会返回首页"
+        ]
+    },
+    "从维修会返回首页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click"
+    }
+
+}

@@ -1,0 +1,71 @@
+{
+    "首页点击任务": {
+        "recognition": "TemplateMatch",
+        "template": "任务.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "任务一键领取1"
+        ]
+    },
+    "任务一键领取1": {
+        "recognition": "TemplateMatch",
+        "template": "任务一键领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "任务一键领取2"
+        ]
+    },
+    "任务一键领取2": {
+        "recognition": "TemplateMatch",
+        "template": "任务一键领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "任务一键领取3"
+        ]
+    },
+    "任务一键领取3": {
+        "recognition": "TemplateMatch",
+        "template": "任务一键领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "任务一键领取4"
+        ]
+    },
+    "任务一键领取4": {
+        "recognition": "TemplateMatch",
+        "template": "任务一键领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "任务一键领取5"
+        ]
+    },
+    "任务一键领取5": {
+        "recognition": "TemplateMatch",
+        "template": "任务一键领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "任务一键领取6"
+        ]
+    },
+    "任务一键领取6": {
+        "recognition": "TemplateMatch",
+        "template": "任务一键领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "任务返回主页"
+        ]
+    },
+    "任务返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    }
+}

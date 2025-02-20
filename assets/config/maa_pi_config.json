@@ -1,0 +1,10 @@
+{
+    "resource": "B 服",
+    "controller": {
+        "name": "桌面端"
+    },
+    "win32": {
+        "hwnd": "0x2d0c28"
+    },
+    "task": []
+}

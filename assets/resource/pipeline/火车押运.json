@@ -1,0 +1,262 @@
+{
+    "首页点击火车押运图标": {
+        "recognition": "TemplateMatch",
+        "template": "首页火车押运图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "首页点击列车已抵达",
+            "首页点击前往派遣",
+            "首页点击火车押运取消箭头"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "首页点击列车已抵达": {
+        "recognition": "OCR",
+        "expected": "列车已抵达",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "右侧向下滑到底1"
+        ]
+    },
+    "右侧向下滑到底1":{
+        "action": "Swipe",
+        "begin": [400,400,10,10],
+        "end": [400,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 200,
+        "next":[
+            "点击领取1"
+        ]
+    },
+    "点击领取1": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "解算页面点击一下屏幕"
+        ]
+    },
+    "解算页面点击一下屏幕": {
+        "recognition": "DirectHit",
+        "target": "点击领取1",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "解算页面识别是否有获得一览",
+            "解算页面点击一下屏幕"
+        ]
+    },
+    "解算页面识别是否有获得一览": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "解算页面点击获得一览"
+        ]
+    },
+    "解算页面点击获得一览": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "返回首页"
+        ]
+    },
+    "返回首页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "首页点击火车押运图标"
+        ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "首页点击前往派遣": {
+        "recognition": "OCR",
+        "expected": "前往派遣",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "寻找目标路线1",
+            "左侧往下滑动1"
+        ]
+    },
+    "寻找目标路线1":{
+        "recognition": "OCR",
+        "expected": "森丘路线",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "右侧往下滑动1"
+        ]
+    },
+    "左侧往下滑动1":{
+        "action": "Swipe",
+        "begin": [75,400,10,10],
+        "end": [75,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 4000,
+        "next":[
+            "寻找目标路线1",
+            "左侧往下滑动1"
+        ]
+    },
+    "右侧往下滑动1": {
+        "action": "Swipe",
+        "begin": [400,400,10,10],
+        "end": [400,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 200,
+        "next":[
+            "点击发车1"
+        ]
+    },
+    "点击发车1":{
+        "recognition": "TemplateMatch",
+        "template": "发车.png",
+        "action": "Click",
+        "index": 2,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击出发1"
+        ]
+    },
+    "点击出发1":{
+        "recognition": "OCR",
+        "expected": "出发",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击确认1"
+        ]
+    },
+    "点击确认1": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "寻找目标路线2",
+            "左侧往下滑动2"
+        ]
+    },
+    "寻找目标路线2":{
+        "recognition": "OCR",
+        "expected": "遗迹路线",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "右侧往下滑动2"
+        ]
+    },
+    "左侧往下滑动2":{
+        "action": "Swipe",
+        "begin": [75,400,10,10],
+        "end": [75,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 4000,
+        "next":[
+            "寻找目标路线2",
+            "左侧往下滑动2"
+        ]
+    },
+    "右侧往下滑动2": {
+        "action": "Swipe",
+        "begin": [400,400,10,10],
+        "end": [400,110,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 200,
+        "next":[
+            "点击发车2"
+        ]
+    },
+    "点击发车2":{
+        "recognition": "TemplateMatch",
+        "template": "发车.png",
+        "action": "Click",
+        "index": 2,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击出发2"
+        ]
+    },
+    "点击出发2":{
+        "recognition": "OCR",
+        "expected": "出发",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击确认2"
+        ]
+    },
+    "点击确认2": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击返回主页"
+        ]
+    },
+    "点击返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "首页点击火车押运取消箭头": {
+        "recognition": "TemplateMatch",
+        "template": "首页火车押运取消箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    }
+
+
+
+
+}

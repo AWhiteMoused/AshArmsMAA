@@ -1,0 +1,58 @@
+{
+    "点击灰烬战线": {
+        "recognition": "TemplateMatch",
+        "template": "灰烬战线.png",
+        "action": "Click",
+        "post_wait_freezes": 20000,
+        "next":[
+            "点击开始游戏"
+        ]
+    },
+    "点击开始游戏": {
+        "recognition": "OCR",
+        "expected": "开始游戏",
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "next":[
+            "识别是否有公告信息",
+            "无公告，直接结束"
+        ]
+    },
+    "识别是否有公告信息": {
+        "recognition": "OCR",
+        "expected": "公告信息",
+        "action": "DoNothing",
+        "post_wait_freezes": 1000,
+        "next":[
+            "登录后点击废都重建"
+        ]
+    },
+    "登录后点击废都重建": {
+        "recognition": "OCR",
+        "expected": "废都重建",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "签到页面点击获得一览"
+        ]
+    },
+    "签到页面点击获得一览": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "签到页面点击返回主页"
+        ]
+    },
+    "签到页面点击返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    },
+    "无公告，直接结束": {
+        "action": "DoNothing",
+        "post_wait_freezes": 1000
+    }
+}

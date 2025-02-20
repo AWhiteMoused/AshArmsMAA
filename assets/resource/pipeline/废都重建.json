@@ -1,0 +1,267 @@
+{
+    "首页点击废都重建": {
+        "recognition": "OCR",
+        "expected": "废都重建",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击税",
+            "点击学联宿舍"
+        ]
+    },
+    "点击税": {
+        "recognition": "TemplateMatch",
+        "template": "税.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击改造件",
+            "点击学联宿舍"
+        ]
+    },
+    "点击改造件": {
+        "recognition": "TemplateMatch",
+        "template": "改造件.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击合金",
+            "点击学联宿舍"
+        ]
+    },
+    "点击合金": {
+        "recognition": "TemplateMatch",
+        "template": "合金.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击学联宿舍"
+        ]
+    },
+    "点击学联宿舍": {
+        "recognition": "OCR",
+        "expected": "学联宿舍",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击1层"
+        ]
+    },
+    "点击1层": {
+        "recognition": "OCR",
+        "expected": "1层",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第1层点击键收取"
+        ]
+    },
+    "第1层点击键收取": {
+        "recognition": "OCR",
+        "expected": "键收取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "收取后第1层点击一键收取",
+            "点击2层"
+        ]
+    },
+    "收取后第1层点击一键收取": {
+        "recognition": "OCR",
+        "expected": "键收取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击2层"
+        ]
+    },
+    "点击2层": {
+        "recognition": "OCR",
+        "expected": "2层",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第2层点击键收取"
+        ]
+    },
+    "第2层点击键收取": {
+        "recognition": "OCR",
+        "expected": "键收取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "收取后第2层点击一键收取",
+            "点击3层"
+        ]
+    },
+    "收取后第2层点击一键收取": {
+        "recognition": "OCR",
+        "expected": "键收取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击3层"
+        ]
+    },
+    "点击3层": {
+        "recognition": "OCR",
+        "expected": "3层",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第3层点击键收取"
+        ]
+    },
+    "第3层点击键收取": {
+        "recognition": "OCR",
+        "expected": "键收取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "收取后第3层点击一键收取",
+            "从宿舍返回废都重建"
+        ]
+    },
+    "收取后第3层点击一键收取": {
+        "recognition": "OCR",
+        "expected": "键收取",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "从宿舍返回废都重建"
+        ]
+    },
+    "从宿舍返回废都重建": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击酒馆夜话"
+        ]
+    },
+    "点击酒馆夜话": {
+        "recognition": "OCR",
+        "expected": "酒馆夜话",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击深入交流"
+        ]
+    },
+    "点击深入交流": {
+        "recognition": "OCR",
+        "expected": "深入交流",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "寻找目标角色",
+            "向下滑"
+        ]
+    },
+    "寻找目标角色":{
+        "recognition": "OCR",
+        "expected": "艾诺丝",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击赠礼"
+        ]
+    },
+    "向下滑":{
+        "action": "Swipe",
+        "begin": [200,600,10,10],
+        "end": [200,400,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 4400,
+        "next":[
+            "寻找目标角色",
+            "向下滑"
+        ]
+    },
+    "点击赠礼": {
+        "recognition": "OCR",
+        "expected": "赠礼",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击礼物"
+        ]
+    },
+    "点击礼物": {
+        "recognition": "TemplateMatch",
+        "template": "可乐.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第一次点击赠送"
+        ]
+    },
+    "第一次点击赠送": {
+        "recognition": "OCR",
+        "expected": "赠送",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第二次点击赠送"
+        ]
+    },
+    "第二次点击赠送": {
+        "recognition": "OCR",
+        "expected": "赠送",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第三次点击赠送"
+        ]
+    },
+    "第三次点击赠送": {
+        "recognition": "OCR",
+        "expected": "赠送",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第一次点击返回箭头"
+        ]
+    },
+    "第一次点击返回箭头": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第二次点击返回箭头"
+        ]
+    },
+    "第二次点击返回箭头": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第三次点击返回箭头"
+        ]
+    },
+    "第三次点击返回箭头": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第四次点击返回箭头"
+        ]
+    },
+    "第四次点击返回箭头": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+
+        ]
+    }
+
+
+
+
+}

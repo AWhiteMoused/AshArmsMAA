@@ -1,0 +1,80 @@
+{
+    "探索-首页点击出击作战": {
+        "recognition": "OCR",
+        "expected": "出击作战",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击探索"
+        ]
+    },
+    "点击探索": {
+        "recognition": "OCR",
+        "expected": "探索",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击左侧箭头"
+        ]
+    },
+    "点击左侧箭头": {
+        "recognition": "TemplateMatch",
+        "template": "探索界面左侧箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击开始探索"
+        ]
+    },
+    "点击开始探索": {
+        "recognition": "OCR",
+        "expected": "开始探索",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击菜单按钮"
+        ]
+    },
+    "点击菜单按钮": {
+        "recognition": "TemplateMatch",
+        "template": "探索界面菜单按钮.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击放弃探索"
+        ]
+    },
+    "点击放弃探索": {
+        "recognition": "OCR",
+        "expected": "放弃探索",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击确认"
+        ]
+    },
+    "点击确认": {
+        "recognition": "TemplateMatch",
+        "template": "确认图标.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击获得一览"
+        ]
+    },
+    "点击获得一览": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "探索结束返回主页"
+        ]
+    },
+    "探索结束返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    }
+}

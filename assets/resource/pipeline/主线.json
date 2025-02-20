@@ -1,0 +1,284 @@
+{
+    "主线-首页点击出击作战": {
+        "recognition": "OCR",
+        "expected": "出击作战",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击主线篇章"
+        ]
+    },
+    "点击主线篇章": {
+        "recognition": "OCR",
+        "expected": "主线篇章",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击下一章"
+        ]
+    },
+    "点击下一章": {
+        "recognition": "TemplateMatch",
+        "template": "主线下一章.png",
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next":[
+            "点击死城",
+            "点击下一章"
+        ]
+    },
+    "点击死城": {
+        "recognition": "OCR",
+        "expected":"死城",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击死城14"
+        ]
+    },
+    "点击死城14": {
+        "recognition": "TemplateMatch",
+        "template": "死城14.png",
+        "action": "Click",
+        "threshold":0.9,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击委派"
+        ]
+    },
+    "点击委派": {
+        "recognition": "OCR",
+        "expected":"委派",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击添加成员"
+        ]
+    },
+    "点击添加成员": {
+        "recognition": "TemplateMatch",
+        "template": "添加成员.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击倒序箭头"
+        ]
+    },
+    "点击倒序箭头": {
+        "recognition": "TemplateMatch",
+        "template": "倒序箭头.png",
+        "action": "Click",
+        "threshold":0.7,
+        "post_wait_freezes": 1000,
+        "next":[
+            "选择第一个角色"
+        ]
+    },
+    "选择第一个角色": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [142,305,92,21],
+        "post_wait_freezes": 1000,
+        "next":[
+            "返回出击界面"
+        ]
+    },
+    "返回出击界面":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click",
+        "next":[
+            "增加委派次数1"
+        ]
+    },
+    "增加委派次数1":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数2"
+        ]
+    },
+    "增加委派次数2":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数3"
+        ]
+    },
+    "增加委派次数3":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数4"
+        ]
+    },
+    "增加委派次数4":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数5"
+        ]
+    },
+    "增加委派次数5":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数6"
+        ]
+    },
+    "增加委派次数6":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数7"
+        ]
+    },
+    "增加委派次数7":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数8"
+        ]
+    },
+    "增加委派次数8":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 500,
+        "action": "Click",
+        "next":[
+            "增加委派次数9"
+        ]
+    },
+    "增加委派次数9":{
+        "recognition": "TemplateMatch",
+        "template": "增加委派次数.png",
+        "threshold":0.99,
+        "post_wait_freezes": 1000,
+        "action": "Click",
+        "next":[
+            "点击出击"
+        ]
+    },
+    "点击出击": {
+        "recognition": "TemplateMatch",
+        "template":"出击.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "等待15秒钟"
+        ]
+    },
+    "等待15秒钟": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "post_wait_freezes": 15000,
+        "next":[
+            "点击死城14领取"
+        ]
+    },
+    "点击死城14领取": {
+        "recognition": "TemplateMatch",
+        "template": "死城14.png",
+        "action": "Click",
+        "threshold":0.9,
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击领取"
+        ]
+    },
+    "点击领取": {
+        "recognition": "TemplateMatch",
+        "template": "领取.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击战斗胜利"
+        ]
+    },
+    "点击战斗胜利":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次点击战斗胜利"
+        ]
+    },
+    "再次点击战斗胜利":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "再次再次点击战斗胜利"
+        ]
+    },
+    "再次再次点击战斗胜利":{
+        "recognition": "OCR",
+        "expected": "战斗胜利",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击完成"
+        ]
+    },
+    "点击完成":{
+        "recognition": "OCR",
+        "expected": "完成",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "主线点击返回1"
+        ]
+    },
+
+
+    
+    "主线点击返回1":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "主线点击返回2"
+        ]
+    },
+    "主线点击返回2":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "主线点击返回3"
+        ]
+    },
+    "主线点击返回3":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "action": "Click",
+        "post_wait_freezes": 1000
+    }
+}

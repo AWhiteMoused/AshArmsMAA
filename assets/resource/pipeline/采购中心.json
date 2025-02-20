@@ -1,0 +1,179 @@
+{
+    "点击采购中心": {
+        "recognition": "TemplateMatch",
+        "template": "采购中心.png",
+        "action": "Click",
+        "post_wait_freezes": 20000,
+        "next":[
+            "点击物资管理局"
+        ]
+    },
+    "点击物资管理局": {
+        "recognition": "TemplateMatch",
+        "template": "物资管理局.png",
+        "action": "Click",
+        "post_wait_freezes": 5000,
+        "next":[
+            "识别是否有情报晶体管",
+            "物资管理局向右滑"
+        ]
+    },
+    "识别是否有情报晶体管": {
+        "recognition": "TemplateMatch",
+        "template":[
+         "情报晶体管/1级.png",
+         "情报晶体管/2级.png",
+         "情报晶体管/3级.png"
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击购买",
+            "识别是否有情报晶体管"
+        ]
+    },
+    "点击购买": {
+        "recognition": "TemplateMatch",
+        "template": "购买.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "购买页面点击获得一览"
+        ]
+    },
+    "购买页面点击获得一览": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "识别是否有情报晶体管",
+            "物资管理局向右滑"
+        ]
+    },
+    "物资管理局向右滑":{
+        "action": "Swipe",
+        "begin": [400,500,10,10],
+        "end": [200,500,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 500,
+        "next":[
+            "识别是否有深度开发套件",
+            "刷新商店",
+            "前往付费商店"
+        ]
+    },
+    "识别是否有深度开发套件": {
+        "recognition": "TemplateMatch",
+        "template":
+         "齿轮.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击购买2",
+            "识别是否有深度开发套件"
+        ]
+    },
+    "点击购买2": {
+        "recognition": "TemplateMatch",
+        "template": "购买.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "购买页面点击获得一览2"
+        ]
+    },
+    "购买页面点击获得一览2": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "识别是否有深度开发套件",
+            "刷新商店",
+            "前往付费商店"
+        ]
+    },
+    "刷新商店": {
+        "recognition": "TemplateMatch",
+        "template": "免费刷新.png",
+        "action": "Click",
+        "threshold":0.999,
+        "post_wait_freezes": 1000,
+        "next":[
+            "识别是否有情报晶体管"
+        ]
+    },
+    "前往付费商店": {
+        "recognition": "TemplateMatch",
+        "template": "前往付费商店.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击作战企划室"
+        ]
+    },
+    "点击作战企划室": {
+        "recognition": "TemplateMatch",
+        "template": "作战企划室.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "寻找是否有免费补给",
+            "作战企划室向右滑"
+        ]
+    },
+    "寻找是否有免费补给": {
+        "recognition": "OCR",
+        "expected": "免费",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "点击购买3"
+        ]
+    },
+    "点击购买3": {
+        "recognition": "TemplateMatch",
+        "template": "购买.png",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "购买页面点击获得一览3"
+        ]
+    },
+    "购买页面点击获得一览3": {
+        "recognition": "OCR",
+        "expected": "获得一览",
+        "action": "Click",
+        "post_wait_freezes": 1000,
+        "next":[
+            "第一次点击返回"
+        ]
+    },
+    "第一次点击返回":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click",
+        "next":[
+            "第二次点击返回"
+        ]
+    },
+    "第二次点击返回":{
+        "recognition": "TemplateMatch",
+        "template": "各种地方的返回箭头.png",
+        "post_wait_freezes": 1000,
+        "action": "Click"
+    },
+    "作战企划室向右滑":{
+        "action": "Swipe",
+        "begin": [600,500,10,10],
+        "end": [200,500,10,10],
+        "post_wait_freezes": 1000,
+        "duration": 4000,
+        "next":[
+            "寻找是否有免费补给",
+            "作战企划室向右滑"
+        ]
+    }
+}
